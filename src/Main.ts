@@ -9,7 +9,7 @@ var port: any = process.env.PORT || 8080;
 
 app.use(express.json());
 app.use("/api", APIRouter);
-
+app.use("/test", express.static("public"));
 app.listen(port, () => {
   console.log(`http://localhost:${port}`);
 });
